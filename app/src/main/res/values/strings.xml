@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">LocationTracker</string>
+    <string name="okay">Okay</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="location_tracker">Location Tracker</string>
+    <string name="logout">Logout</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="time">Time</string>
+    <string name="table">Table</string>
+    <string name="select_date">Select Date</string>
+</resources>
