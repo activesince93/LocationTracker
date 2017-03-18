@@ -89,8 +89,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     String CREATE_TABLE_LOCATION_DATA = "CREATE TABLE IF NOT EXISTS " + TABLE_LOCATION_DATA + "("
             + LOCATION_ID + " INTEGER PRIMARY KEY,"
-            + LOCATION_LATITUDE + " REAL,"
-            + LOCATION_LONGITUDE + " REAL,"
+            + LOCATION_LATITUDE + " TEXT,"
+            + LOCATION_LONGITUDE + " TEXT,"
             + LOCATION_NAME + " TEXT,"
             + LOCATION_TIME + " INTEGER,"
             + LOCATION_TOTAL_DISTANCE_COVERED + " INTEGER"
@@ -109,8 +109,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public void addNewLocationData(LocationData locationData) {
         SQLiteDatabase db = openDatabase();
         ContentValues values = new ContentValues();
-        values.put(LOCATION_LATITUDE, locationData.getPlace().getLatitude());
-        values.put(LOCATION_LONGITUDE, locationData.getPlace().getLongitude());
+        values.put(LOCATION_LATITUDE, String.valueOf(locationData.getPlace().getLatitude()));
+        values.put(LOCATION_LONGITUDE, String.valueOf(locationData.getPlace().getLongitude()));
         values.put(LOCATION_NAME, locationData.getPlace().getName());
         values.put(LOCATION_TIME, locationData.getTime());
         values.put(LOCATION_TOTAL_DISTANCE_COVERED, locationData.getTotalDistanceCovered());
